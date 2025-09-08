@@ -1,0 +1,365 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usepackage{fullpage}
+\usepackage{tikz-cd}
+\usepackage{spectralsequences}
+\usepackage{adjustbox}
+\usepackage{xfrac}
+\usepackage{tcolorbox}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\graphicspath{ {D:/Chrome Downloads./} }
+\usepackage[parfill]{parskip}
+\usepackage{amsthm}
+\usetikzlibrary{calc}
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}[section]
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[theorem]
+\theoremstyle{definition}
+\newtheorem{remark}{Remark}[theorem]
+\theoremstyle{definition}
+\newtheorem{proposition}{Proposition}[theorem]
+\theoremstyle{definition}
+\newtheorem{lemma}[theorem]{Lemma}
+\theoremstyle{definition}
+\newtheorem{corollary}{Corollary}[theorem]
+\theoremstyle{definition}
+\newtheorem{example}{Example}[theorem]
+\tikzset{curve/.style={settings={#1},to path={(\tikztostart)
+    .. controls ($(\tikztostart)!\pv{pos}!(\tikztotarget)!\pv{height}!270:(\tikztotarget)$)
+    and ($(\tikztostart)!1-\pv{pos}!(\tikztotarget)!\pv{height}!270:(\tikztotarget)$)
+    .. (\tikztotarget)\tikztonodes}},
+    settings/.code={\tikzset{quiver/.cd,#1}
+        \def\pv##1{\pgfkeysvalueof{/tikz/quiver/##1}}},
+    quiver/.cd,pos/.initial=0.35,height/.initial=0}
+\title{Math 622: Complex Algebraic Geomtry}
+\author{David Zhu}
+
+\begin{document}
+\maketitle
+
+This is notes taken for Math 622: Complex Algebraic Geometry in Fall 2025, taught by Professor Ron Donagi at UPenn. 
+
+\section{Overview of Hodge Theory}
+\subsection{Wed 27}
+The first part of the course will be a primer on complex algebraic geometry, in particular Hodge theory, without too much detailed proofs. 
+
+
+\begin{tcolorbox}[colback=purple!5!white,colframe=purple!75!black]
+\begin{definition}
+A \textbf{Kahler manifold} is a complex maniolfd with a Hermitian metric whose imaginary part is closed. 
+\end{definition}
+\end{tcolorbox}
+
+
+\begin{tcolorbox}[colback=yellow!5!white,colframe=yellow!30!white]
+\begin{example}
+The complex projective spaces $\mathbb{CP}^n$ with Fubini-Study metric are Kahler manifolds. Submanifolds of projective space inherit Kahler structures.
+\end{example}
+\end{tcolorbox}
+A reference for this is \cite{Huy} 3.1.9.
+
+
+
+
+
+
+\begin{tcolorbox}[colback=red!5!white,colframe=red!30!white]
+\begin{theorem}[Kodaira Embedding]
+A compact complex maniolf dadmits a holomorphic embedding into projective space iff it has a Kahler metric whose Kahler form is integral.
+\end{theorem}
+\end{tcolorbox}
+The upshot is that Hodge and Lefshetz decomositions work for compact Kahler manifolds. 
+
+Review of complex differential forms
+
+
+\begin{tcolorbox}[colback=purple!5!white,colframe=purple!75!black]
+\begin{definition}[Complex Differential Forms]
+
+\end{definition}
+\end{tcolorbox}
+
+
+
+
+
+\begin{tcolorbox}[colback=purple!5!white,colframe=purple!75!black]
+\begin{definition}
+For a complex manifold $X$, we have a decomposition of differential forms
+\[\Omega^k_{X,\mathbb{C}}:=\oplus_{p+q=k}\Omega^{p,q}_{X}\]
+\end{definition}
+\end{tcolorbox}
+
+
+
+\begin{tcolorbox}[colback=red!5!white,colframe=red!30!white]
+\begin{theorem}[Hodge Decomposition]
+For a compact Kahler manifold
+\[H^{k}(X,\mathbb{C})\cong \oplus_{p+q=k}H^{p,q}(X)\]
+and 
+\[H^{p,q}(X)\cong \overline{H^{p,q}(X)}\]
+\end{theorem}
+\end{tcolorbox}
+The left hand side will be the DeRham cohomology, and the left hand side is the Dolbeaut cohomoology. 
+
+\begin{tcolorbox}[colback=yellow!5!white,colframe=yellow!30!white]
+\begin{example}[Hodge Diamond of a Riemann Surface]
+    For a compact Riemann surafce $X$ of genus $g$, the Hodge numbers are 
+    \[h^{0,0}=1, h^{1,0}=g, h^{0,1}=g, h^{1,1}=1\]
+
+
+    \[\begin{tikzcd}
+        & 1 \\
+        g && g \\
+        & 1
+    \end{tikzcd}\]
+\end{example}
+\end{tcolorbox}
+
+
+\begin{tcolorbox}[colback=yellow!5!white,colframe=yellow!30!white]
+\begin{example}
+For a compact complex surface $X$, the Hodge numbers are 
+\[\begin{tikzcd}
+	&& {h^{0,0}} \\
+	& {h^{1,0}} & {} & {h^{0,1}} && {} \\
+	{h^{2,0}} && {h^{1,1}} && {h^{0,2}} \\
+	& {h^{2,1}} && {h^{1,2}} \\
+	&& {h^{2,2}}
+\end{tikzcd}\]
+\end{example}
+\end{tcolorbox}
+
+
+\begin{tcolorbox}[colback=purple!5!white,colframe=purple!75!black]
+\begin{definition}
+Given the Kahler form $\omega$. define the Lefshetz operator 
+\[L: H^{k}(X, \mathbb{R})\to H^{k+2}(X, \mathbb{R}) \]
+given by 
+\[\alpha\mapsto \omega \wedge \alpha\]
+\end{definition}
+\end{tcolorbox}
+
+
+\begin{tcolorbox}[colback=red!5!white,colframe=red!30!white]
+\begin{theorem}[Hard Lefshetz]
+    For $n= dim X$, and $k\leq n$, we have 
+    \[L^{n-k}: H^{k}(X, \mathbb{R})\cong H^{2n-k}(X, \mathbb{R})\]
+
+\end{theorem}
+\end{tcolorbox}
+
+
+\begin{tcolorbox}[colback=purple!5!white,colframe=purple!75!black]
+\begin{definition}[Primitive Cohomology]
+    \[H^{k}(X, \mathbb{R})_{\textrm{prim}}:= ker(L^{n-k+1})\]
+\end{definition}
+\end{tcolorbox}
+
+
+\subsection{Harmonic Forms}
+\begin{enumerate}
+    \item Equip $X$ with a Kahler metric. 
+    \item Define the adjoint $d^*$ of $d$, and the Laplacian 
+    \[\Delta_{d}=dd^*+d^*d\]
+    \item The harmonic forms are 
+    \[\mathcal{H}^k{X}:= ker \Delta_d\]
+\end{enumerate}
+
+
+
+\begin{tcolorbox}[colback=green!5!white,colframe=green!30!white]
+\begin{corollary}[Harmonic Decomposition]
+If $\alpha$ is harmonic, then each $(p,q)$-component of $\alpha$ is harmonic,. hnece 
+\[\mathcal{H}(X)\cong \oplus_{p+q=k} \mathcal{H}^{p,q}(X)\]
+\end{corollary}
+\end{tcolorbox}
+
+The Frolicher spectra seauence is obtained from the Hodge filtratiokn on the de Rham complex. 
+
+
+\begin{tcolorbox}[colback=red!5!white,colframe=red!30!white]
+\begin{theorem}
+For a compact Kahler manifold, the Frolicher spectral sequence degenerates at $E_1$.
+\end{theorem}
+\end{tcolorbox}
+The theorem implies the Hodge filtration on cohomology 
+\[F^pH^k(X, \mathbb{C})= \oplus_{r\geq p}H^{r,k-r}(X)\]
+
+
+\begin{tcolorbox}[colback=purple!5!white,colframe=purple!75!black]
+\begin{definition}
+A \textbf{Hodge structure} of \textbf{weight} $k$ is a decomposition 
+\[H_{\mathbb{C}}=\oplus_{p+1=k}H^{p,q}\]
+with $H^{p,q}=\overline{H^{p,q}}$
+\end{definition}
+\end{tcolorbox}
+
+A story is that there is a dense open subset in $\mathbb{P}^9$ that parameterizes cubic curves in $\mathbb{P}^3$. Replacing the curves with their cohomology gives you a vector bundle over the base space. 
+
+
+
+\begin{tcolorbox}[colback=purple!5!white,colframe=purple!75!black]
+\begin{definition}
+An \textbf{analytic cycle} of codimension $k$ is a linear combination of irreducible analytic subset of codimension $k$.
+\end{definition}
+\end{tcolorbox}
+
+The Hodge conjecture states that if 
+\[\alpha \in H^{2k}(X, \mathbb{Q})\cap H^{k,k}(X)\], then $\alpha$ is an algebraic cycle. 
+
+\section{Wed, Sep 3}
+Did not attend lol.
+\section{Mon, Sep 8}
+Review of complex manifolds and sheaves. 
+
+
+\begin{tcolorbox}[colback=blue!5!white,colframe=blue!30!white]
+\begin{proposition}
+There is an equivalence between vector bundles and locally free $\mathcal{O}_X$-modules through sheaf of sections. 
+\end{proposition}
+\end{tcolorbox}
+
+
+\begin{tcolorbox}[colback=purple!5!white,colframe=purple!75!black]
+\begin{definition}
+The \textbf{Picard group} of $X$ is the set of isomorphism classes of line bundles under tensor product. 
+\[\textrm{Pic}(X)\cong H^1(X, \mathcal{O}^*_X)\]
+\end{definition}
+\end{tcolorbox}
+The exponential sequence 
+\[\begin{tikzcd}
+0\arrow[r]&\mathbb{Z}\arrow[r]& \mathcal{O}_X\arrow[r]&\mathcal{O}^*_X\arrow[r]&0
+\end{tikzcd}\]
+induces the map 
+\[c_1: \textrm{Pic}(X)\to H^2\]
+
+
+\begin{tcolorbox}[colback=purple!5!white,colframe=purple!75!black]
+\begin{definition}[\textbf{Canonical ring}]
+We define
+\[R(X)=\oplus_{m\geq 0} H^0(X,K_X^{\otimes m})\]
+where $K_X$ is the canonical bundle. 
+\end{definition}
+\end{tcolorbox}
+
+
+\begin{tcolorbox}[colback=purple!5!white,colframe=purple!75!black]
+\begin{definition}
+A sheaf $F$ is \textbf{flasque} is every restriction map 
+\[F(X)\to F(U)\]
+is surjective.
+\end{definition}
+\end{tcolorbox}
+
+
+\begin{tcolorbox}[colback=green!5!white,colframe=green!30!white]
+\begin{remark}
+Quote from Ron: A flasque sheaf is almost never ``nice'': for example, the sheaf of continuous functions of a punctured disk is not flasque.
+\end{remark}
+\end{tcolorbox}
+
+
+\begin{tcolorbox}[colback=blue!5!white,colframe=blue!30!white]
+\begin{proposition}
+Every sheaf has a flasque resolution. 
+\end{proposition}
+\end{tcolorbox}
+
+
+\begin{tcolorbox}[colback=purple!5!white,colframe=purple!75!black]
+\begin{definition}
+The \textbf{sheaf cohomology} of a space with a sheaf $(M,F)$ is the cohomology of the chain complex obtained from takning global sections of any flasque resolution.  
+\end{definition}
+\end{tcolorbox}
+As usual, it is independent of the chosen resolution, and a short exact sequence of sheaves induces a long exact sequence on cohomology. 
+
+
+\begin{tcolorbox}[colback=purple!5!white,colframe=purple!75!black]
+\begin{definition}
+A sheaf is \textbf{acyclic} if all higher cohomologies are $0$. 
+\end{definition}
+\end{tcolorbox}
+
+
+\begin{tcolorbox}[colback=red!5!white,colframe=red!30!white]
+\begin{theorem}
+For paracompact spaces, the Cech cohomology and sheaf cohomology are naturally isomorphic. 
+\end{theorem}
+\end{tcolorbox}
+
+
+\begin{tcolorbox}[colback=blue!5!white,colframe=blue!30!white]
+\begin{proposition}
+For smooth line bundles, 
+\[c_1: \textrm{Pic}(X)\to H^2(X; \mathbb{Z})\]
+is an isomorphism, for $\mathcal{O}^*_X$ is \textbf{soft}, thus acyclic.
+\end{proposition}
+\end{tcolorbox}
+For holomorphic case, this is \textbf{NOT} true. 
+
+
+\begin{tcolorbox}[colback=blue!5!white,colframe=blue!30!white]
+\begin{proposition}[Global Sections of $\mathcal{O}(k)$]
+For $k>0$, there is an isomorphism 
+\[H^0(\mathbb{P}^n, \mathcal{O}(k))\cong \mathbb{C}[z_0,...,z_n]_k\cong \textrm{Sym}^k*(V^{\vee})\]
+\end{proposition}
+\end{tcolorbox}
+
+
+
+Let $T_{\mathbb{P}^n}$ and $\Omega^1_{\mathbb{P}^n}$ be the holomorphic tangent and cotangent bundles. 
+
+
+\begin{tcolorbox}[colback=blue!5!white,colframe=blue!30!white]
+\begin{proposition}[Euler Sequence]
+On $\mathbb{P}^n$ there is a natural short exact sequence of holomorphic vector bundles 
+\[\begin{tikzcd}
+0\arrow[r]&\mathcal{O}_{\mathbb{P}^n}\arrow[r]& \mathcal{O}_{\mathbb{P}^n}(1)^{\oplus (n+1)}\arrow[r]& T_{\mathbb{P}^n}\arrow[r]&0
+\end{tikzcd}\]
+
+Alternatively, one may dualize and get 
+\[ \begin{tikzcd}
+0\arrow[r]&\Omega^1_{\mathbb{P}^n}\arrow[r]& \mathcal{O}_{\mathbb{P}^n}(-1)^{\oplus (n+1)}\arrow[r]&\mathcal{O}_{\mathbb{P}^n}\arrow[r]&0
+\end{tikzcd}\]
+
+
+
+\end{proposition}
+\end{tcolorbox}
+
+
+\begin{tcolorbox}[colback=blue!5!white,colframe=blue!30!white]
+\begin{proposition}
+The \textbf{canonical bundle} of $\mathbb{P}^n$ is 
+\[K_{\mathbb{P}^n}\cong \mathcal{O}_{\mathbb{P}^n}(-n-1)\]
+\end{proposition}
+\end{tcolorbox}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+\bibliographystyle{plain}
+\bibliography{Complex}
+
+\end{document}
