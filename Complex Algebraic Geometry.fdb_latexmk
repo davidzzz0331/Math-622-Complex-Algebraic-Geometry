@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex Complex Algebraic Geometry"] 1757346128 "Complex Algebraic Geometry.aux" "Complex Algebraic Geometry.bbl" "Complex Algebraic Geometry" 1757346413 0
-  "./Complex.bib" 1756314441 280 48b381c408252e0e556d25e4ee536f16 ""
+["bibtex Complex Algebraic Geometry"] 1763951185 "Complex Algebraic Geometry.aux" "Complex Algebraic Geometry.bbl" "Complex Algebraic Geometry" 1763952389 0
+  "./Complex.bib" 1757555851 539 24e408e4605ed25c8fe3b9609f123d4c ""
   "/usr/local/texlive/2023/texmf-dist/bibtex/bst/base/plain.bst" 1292289607 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "Complex Algebraic Geometry.aux" 1757346413 1227 cb4710a2ba4cd1ee0cc77cea6f01f435 "pdflatex"
+  "Complex Algebraic Geometry.aux" 1763952389 1874 68471db9032e942f9916d7ba0e512117 "pdflatex"
   (generated)
   "Complex Algebraic Geometry.bbl"
   "Complex Algebraic Geometry.blg"
   (rewritten before read)
-["pdflatex"] 1757346412 "/Users/davidzhu/Documents/GitHub/Math-622-Complex-Algebraic-Geometry/Complex Algebraic Geometry.tex" "Complex Algebraic Geometry.pdf" "Complex Algebraic Geometry" 1757346413 0
-  "/Users/davidzhu/Documents/GitHub/Math-622-Complex-Algebraic-Geometry/Complex Algebraic Geometry.tex" 1757346411 10817 d378f54e014ee2244301e67d9ce24d15 ""
+["pdflatex"] 1763952388 "/Users/davidzhu/Documents/GitHub/Math-622-Complex-Algebraic-Geometry/Complex Algebraic Geometry.tex" "Complex Algebraic Geometry.pdf" "Complex Algebraic Geometry" 1763952389 0
+  "/Users/davidzhu/Documents/GitHub/Math-622-Complex-Algebraic-Geometry/Complex Algebraic Geometry.tex" 1763952387 33497 30900593252d83bda82943d3500a31e3 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -34,12 +34,14 @@
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmti10.tfm" 1136768653 1480 aa8e34af0eb6a2941b776984cf1dfdc4 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb" 1248133631 34811 78b52f49e893bcba91bd7581cdc144c0 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1248133631 32080 340ef9bf63678554ee606688e7b5339d ""
+  "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb" 1248133631 30251 6afa5cb1d0204815a708a080681d4674 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1248133631 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
   "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb" 1248133631 37912 77d683123f92148345f3fc36a38d9ab1 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb" 1248133631 36281 c355509802a035cadc5f15869451dcee ""
   "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1248133631 35752 024fb6c41858982481f6968b5fc26508 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1248133631 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb" 1248133631 32362 179c33bbf43f19adbb3825bb4e36e57a ""
+  "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb" 1248133631 31809 8670ca339bf94e56da1fc21c80635e2a ""
   "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1248133631 32762 224316ccc9ad3ca0423a14971cfa7fc1 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1248133631 32716 08e384dc442464e7285e891af9f45947 ""
@@ -225,10 +227,10 @@
   "/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1710130202 4623355 b8cad38412faebe1ce5b780a45db67bd ""
   "/usr/local/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1710130178 7883461 5901c145d91f673e1f689bc83c44d735 ""
   "/usr/local/texlive/2023/texmf.cnf" 1678822455 577 1b2b1af17af2508fb20dd85783af4050 ""
-  "Complex Algebraic Geometry.aux" 1757346413 1227 cb4710a2ba4cd1ee0cc77cea6f01f435 "pdflatex"
-  "Complex Algebraic Geometry.bbl" 1757346128 195 1ce4278ab8a65007e03e66ecaeb39784 "bibtex Complex Algebraic Geometry"
-  "Complex Algebraic Geometry.out" 1757346413 590 ff8cb88c737643622c7de4093fbda4c0 "pdflatex"
-  "Complex Algebraic Geometry.tex" 1757346411 10817 d378f54e014ee2244301e67d9ce24d15 ""
+  "Complex Algebraic Geometry.aux" 1763952389 1874 68471db9032e942f9916d7ba0e512117 "pdflatex"
+  "Complex Algebraic Geometry.bbl" 1763951186 366 9052335533399ee2a997c4214f41d2fb "bibtex Complex Algebraic Geometry"
+  "Complex Algebraic Geometry.out" 1763952389 1371 f383f5706d382fd9b6d9286734e78dde "pdflatex"
+  "Complex Algebraic Geometry.tex" 1763952387 33497 30900593252d83bda82943d3500a31e3 ""
   (generated)
   "Complex Algebraic Geometry.aux"
   "Complex Algebraic Geometry.log"
